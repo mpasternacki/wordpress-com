@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %title WordPress.com authorizer
+    %link{:rel => "stylesheet",
+          :href => "http://www.blueprintcss.org/blueprint/screen.css",
+          :type => "text/css",
+          :media => "screen, projection"}
+  %body
+    .container
+      %h1 Example authorizer for WordPress.com REST API
+      %h2 Authorized successfully
+      %pre.success= YAML::dump(session[:wpc])
+      %form(method="POST" action="/forget")
+        %input(type="submit" value="Forget it!")
